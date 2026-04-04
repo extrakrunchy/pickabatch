@@ -3,6 +3,7 @@ export type Product = {
   name: string;
   details: string;
   note: string;
+  price: string;
   imageMode: "single" | "dual";
   imageSrc?: string;
   imageSrcA?: string;
@@ -17,6 +18,7 @@ export const products: Product[] = [
     name: "Mystic Labs Gummies — 5 Count",
     details: "5 count pack",
     note: "Flavors shown by product image.",
+    price: "$14.99",
     imageMode: "single",
     imageSrc: "/images/mystic-gummies-5ct.jpeg",
     coaUrl: "#replace-with-5ct-coa-link",
@@ -27,6 +29,7 @@ export const products: Product[] = [
     name: "Mystic Labs Gummies — 30 Count",
     details: "30 count jar",
     note: "Flavors shown by product image.",
+    price: "$54.99",
     imageMode: "single",
     imageSrc: "/images/mystic-gummies-30ct.webp",
     coaUrl: "#replace-with-30ct-coa-link",
@@ -37,6 +40,7 @@ export const products: Product[] = [
     name: "Mystic Labs Tablets — Coming Soon",
     details: "Coming in 5ct blister pack and 10ct bottle",
     note: "Berry Rush only.",
+    price: "Coming Soon",
     imageMode: "dual",
     imageSrcA: "/images/mystic-tablets-blister.webp",
     imageSrcB: "/images/mystic-tablets-bottle.webp",
