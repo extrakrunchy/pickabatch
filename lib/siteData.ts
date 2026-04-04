@@ -38,7 +38,7 @@ export const products: Product[] = [
   {
     id: "mystic-tablets-soon",
     name: "Mystic Labs Tablets — Coming Soon",
-    details: "Coming in 5ct blister pack and 10ct bottle",
+    details: "Coming in 4ct blister pack and 10ct bottle",
     note: "Berry Rush only.",
     price: "Coming Soon",
     imageMode: "dual",
