@@ -9,7 +9,13 @@ export function HomeContent() {
 
   return (
     <SiteShell cartCount={cartCount}>
-      <section className="hero container">
+      <section className="hero hero-smoke container">
+        <div className="hero-smoke-layer" aria-hidden="true">
+          <div className="hero-smoke-plume hero-smoke-plume-a" />
+          <div className="hero-smoke-plume hero-smoke-plume-b" />
+          <div className="hero-smoke-plume hero-smoke-plume-c" />
+        </div>
+
         <div className="hero-pills">
           <Link href="/products">Cannabis</Link>
           <Link href="/products">Kratom</Link>
@@ -20,7 +26,8 @@ export function HomeContent() {
         <h1>pick A batch</h1>
         <p className="lead">Know your batch. Choose better. Feel better.</p>
         <p className="lead">
-          A cleaner, smarter botanical storefront built around transparency, consistent products, and the details that actually matter.
+          A cleaner, smarter botanical storefront built around transparency,
+          consistent products, and the details that actually matter.
         </p>
 
         <div className="banner">
