@@ -423,3 +423,57 @@ button {
     padding-top: 52px;
   }
 }
+.hero-smoke {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-smoke > *:not(.hero-smoke-layer) {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-smoke-layer {
+  pointer-events: none;
+  position: absolute;
+  inset: -20px -40px 0;
+  z-index: 1;
+  opacity: 0.34;
+  overflow: hidden;
+}
+
+.hero-smoke-plume {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(58px);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.08) 35%,
+    rgba(255, 255, 255, 0) 72%
+  );
+  animation: heroSmokeFloat 18s ease-in-out infinite alternate;
+}
+
+.hero-smoke-plume-a {
+  width: 420px;
+  height: 240px;
+  top: 10px;
+  left: -80px;
+}
+
+.hero-smoke-plume-b {
+  width: 360px;
+  height: 220px;
+  top: 60px;
+  right: -70px;
+  animation-duration: 22s;
+}
+
+.hero-smoke-plume-c {
+  width: 520px;
+  height: 260px;
+  top: 130px;
+  left: 50%;
+  animation: heroSmokeFloatCenter 26s ease-in-out infinite alternate;
+}
