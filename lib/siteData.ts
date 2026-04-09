@@ -10,6 +10,7 @@ export type Product = {
   imageSrcB?: string;
   coaUrl: string;
   action: "cart" | "soon";
+  flavors?: string[];
 };
 
 export const products: Product[] = [
@@ -23,6 +24,14 @@ export const products: Product[] = [
     imageSrc: "/images/mystic-gummies-5ct.jpeg",
     coaUrl: "#replace-with-5ct-coa-link",
     action: "cart",
+    flavors: [
+      "Mystic Berry",
+      "Blood Orange",
+      "Twisted Lime",
+      "Yuzu Lemonade",
+      "Caribbean Punch",
+      "Mango Pineapple",
+    ],
   },
   {
     id: "mystic-gummies-30ct",
@@ -34,6 +43,14 @@ export const products: Product[] = [
     imageSrc: "/images/mystic-gummies-30ct.webp",
     coaUrl: "#replace-with-30ct-coa-link",
     action: "cart",
+    flavors: [
+      "Mystic Berry",
+      "Blood Orange",
+      "Twisted Lime",
+      "Yuzu Lemonade",
+      "Caribbean Punch",
+      "Mango Pineapple",
+    ],
   },
   {
     id: "mystic-tablets",
@@ -46,6 +63,7 @@ export const products: Product[] = [
     imageSrcB: "/images/mystic-tablets-10ct.webp",
     coaUrl: "#replace-with-tablets-coa-link",
     action: "soon",
+    flavors: ["Berry Rush"],
   },
 ];
 
