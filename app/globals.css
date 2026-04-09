@@ -438,7 +438,7 @@ button {
   position: absolute;
   inset: -20px -40px 0;
   z-index: 1;
-  opacity: 0.34;
+  opacity: 0.24;
   overflow: hidden;
 }
 
@@ -474,6 +474,15 @@ button {
   width: 520px;
   height: 260px;
   top: 130px;
-  left: 50%;
-  animation: heroSmokeFloatCenter 26s ease-in-out infinite alternate;
+  left: calc(50% - 260px);
+  animation-duration: 26s;
+}
+
+@keyframes heroSmokeFloat {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(0, -10px, 0) scale(1.06);
+  }
 }
