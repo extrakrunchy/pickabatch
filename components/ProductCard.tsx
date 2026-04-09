@@ -51,7 +51,8 @@ export function ProductCard({ product }: { product: Product }) {
 
       <h3>{product.name}</h3>
       <p>{product.details}</p>
-      <div className="card-meta">{product.note}</div>
+      <p>{product.note}</p>
+      <p className="mt-2 text-sm text-white/80">{product.price}</p>
 
       {requiresFlavor ? (
         <select
