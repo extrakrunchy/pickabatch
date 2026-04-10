@@ -10,10 +10,13 @@ export function HomeContent() {
   return (
     <SiteShell cartCount={cartCount}>
      <section className="hero hero-smoke container" style={{ position: "relative", overflow: "hidden" }}>
-  <div className="hero-smoke-layer" aria-hidden="true">
-    <div className="hero-smoke-plume hero-smoke-plume-a" />
-    <div className="hero-smoke-plume hero-smoke-plume-b" />
-    <div className="hero-smoke-plume hero-smoke-plume-c" />
+<div className="hero-smoke-layer" aria-hidden="true">
+  <div className="hero-smoke-plume hero-smoke-plume-a" />
+  <div className="hero-smoke-plume hero-smoke-plume-b" />
+  <div className="hero-smoke-plume hero-smoke-plume-c" />
+  <div className="hero-smoke-plume hero-smoke-plume-d" />
+  <div className="hero-smoke-plume hero-smoke-plume-e" />
+</div>
   </div>
 
   <div className="hero-links">
