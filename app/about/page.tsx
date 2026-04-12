@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { SiteShell } from "@/components/SiteShell";
 import { useCart } from "@/components/CartProvider";
+import { aboutBrandTiles } from "@/lib/siteData";
 
 export default function AboutPage() {
   const { cartCount } = useCart();
@@ -133,21 +135,15 @@ export default function AboutPage() {
           }}
         >
           <SectionCard title="Why This Exists">
-            <p>
-              Pick A Batch was built to cut through the noise.
-            </p>
-            <p>
-              Too many products. Too many claims. Not enough clarity.
-            </p>
+            <p>Pick A Batch was built to cut through the noise.</p>
+            <p>Too many products. Too many claims. Not enough clarity.</p>
             <p>
               Most people shopping in this space are left guessing — relying on
               branding, hype, or whatever happens to be in stock. The products
               that actually matter are often buried, inconsistent, overpriced,
               or backed by vague promises instead of real transparency.
             </p>
-            <p>
-              That never sat right.
-            </p>
+            <p>That never sat right.</p>
             <p>
               Pick A Batch exists to bring structure back into the process.
               Instead of overwhelming people with endless options, the goal is
@@ -173,9 +169,7 @@ export default function AboutPage() {
           }}
         >
           <SectionCard title="Why Pick A Batch?">
-            <p>
-              Because the batch matters.
-            </p>
+            <p>Because the batch matters.</p>
             <p>
               Two products can look nearly identical and perform completely
               differently depending on how they were produced, tested, stored,
@@ -221,9 +215,7 @@ export default function AboutPage() {
           }}
         >
           <SectionCard title="Built from Experience">
-            <p>
-              Pick A Batch was not created from the outside looking in.
-            </p>
+            <p>Pick A Batch was not created from the outside looking in.</p>
             <p>
               It comes from years of direct hands-on experience in cannabis —
               including early recreational markets in Colorado, managing
@@ -306,6 +298,85 @@ export default function AboutPage() {
             >
               Explore Cannabis
             </Link>
+          </div>
+        </SectionCard>
+
+        <SmokeDivider />
+
+        <SectionCard title="Featured Brands">
+          <p style={{ marginTop: 0 }}>
+            A growing lineup of brands and product lines selected for
+            transparency, consistency, and real-world demand.
+          </p>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+              gap: "1rem",
+              marginTop: "1.25rem",
+            }}
+          >
+            {aboutBrandTiles.map((brand) => (
+              <div
+                key={`${brand.category}-${brand.label}`}
+                style={{
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  borderRadius: 18,
+                  padding: "1rem",
+                  background: "rgba(255,255,255,0.025)",
+                  minHeight: 120,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  textAlign: "center",
+                }}
+              >
+                {brand.type === "image" ? (
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      gap: "0.7rem",
+                    }}
+                  >
+                    <Image
+                      src={brand.imageSrc}
+                      alt={brand.label}
+                      width={170}
+                      height={80}
+                      style={{
+                        width: "100%",
+                        maxWidth: 170,
+                        height: "auto",
+                        objectFit: "contain",
+                      }}
+                    />
+                    {brand.caption ? (
+                      <span
+                        style={{
+                          fontSize: "0.88rem",
+                          color: "rgba(255,255,255,0.72)",
+                        }}
+                      >
+                        {brand.caption}
+                      </span>
+                    ) : null}
+                  </div>
+                ) : (
+                  <span
+                    style={{
+                      fontSize: "1rem",
+                      fontWeight: 600,
+                      color: "rgba(255,255,255,0.92)",
+                    }}
+                  >
+                    {brand.label}
+                  </span>
+                )}
+              </div>
+            ))}
           </div>
         </SectionCard>
 
