@@ -21,7 +21,7 @@ export const products: Product[] = [
     note: "Flavors shown by product image.",
     price: "$15.99",
     imageMode: "single",
-    imageSrc: "/images/mystic-gummies-5ct.jpeg",
+    imageSrc: "/images/mystic-gummies-5ct.png",
     coaUrl: "#replace-with-5ct-coa-link",
     action: "cart",
     flavors: [
@@ -40,7 +40,7 @@ export const products: Product[] = [
     note: "Flavors shown by product image.",
     price: "$64.99",
     imageMode: "single",
-    imageSrc: "/images/mystic-gummies-30ct.webp",
+    imageSrc: "/images/mystic-gummies-30ct.png",
     coaUrl: "#replace-with-30ct-coa-link",
     action: "cart",
     flavors: [
@@ -65,6 +65,7 @@ export const products: Product[] = [
     flavors: ["Berry Rush"],
   },
 ];
+
 
 export const brandTiles = [
   { type: "text", label: "Mystic Labs" },
