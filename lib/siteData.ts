@@ -67,11 +67,29 @@ export const products: Product[] = [
 ];
 
 
-export const brandTiles = [
-  { type: "text", label: "Mystic Labs" },
-  { type: "image", label: "7STAX", imageSrc: "/images/7-stax-logo.png", maskLowerText: true, caption: "nano-mitragynine line" },
-  { type: "text", label: "Brand Logo" },
-  { type: "text", label: "Brand Logo" },
-  { type: "text", label: "Brand Logo" },
-  { type: "text", label: "Brand Logo" },
+export const allBrands = [
+  { type: "text", label: "Mystic Labs", category: "kratom" },
+
+  {
+    type: "image",
+    label: "7STAX",
+    category: "kratom",
+    imageSrc: "/images/7-stax-logo.png",
+    maskLowerText: true,
+    caption: "nano-mitragynine line",
+  },
+
+  { type: "text", label: "Green Roads", category: "cannabis" },
+  { type: "text", label: "Cannabis Life", category: "cannabis" },
+  { type: "text", label: "Curated THCa Flower & Extract", category: "cannabis" },
 ] as const;
+
+export const aboutBrandTiles = allBrands;
+
+export const kratomBrandTiles = allBrands.filter(
+  (brand) => brand.category === "kratom"
+);
+
+export const cannabisBrandTiles = allBrands.filter(
+  (brand) => brand.category === "cannabis"
+);
