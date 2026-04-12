@@ -69,7 +69,7 @@ export const products: Product[] = [
 
 export const brandTiles = [
   { type: "text", label: "Mystic Labs" },
-  { type: "image", label: "7STAX", imageSrc: "/images/7stax-logo.jpg", maskLowerText: true, caption: "nano-mitragynine line" },
+  { type: "image", label: "7STAX", imageSrc: "/images/7-stax-logo.png", maskLowerText: true, caption: "nano-mitragynine line" },
   { type: "text", label: "Brand Logo" },
   { type: "text", label: "Brand Logo" },
   { type: "text", label: "Brand Logo" },
