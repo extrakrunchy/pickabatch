@@ -144,11 +144,15 @@ button { cursor: pointer; }
 .btn,
 .btn-secondary,
 .btn-disabled {
-  border-radius: 999px;
-  padding: 13px 18px;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.72rem;
+  opacity: 0.85;
+  color: #cfc8ff;
+  font-weight: 700;
+  text-shadow:
+    0 0 4px rgba(215, 208, 255, 0.25),
+    0 0 10px rgba(215, 208, 255, 0.12);
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.18);
+  cursor: not-allowed;
 }
 
 .btn {
