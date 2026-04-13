@@ -1,3 +1,18 @@
+export type Product = {
+  id: string;
+  name: string;
+  details: string;
+  note: string;
+  price: string;
+  imageMode: "single" | "dual";
+  imageSrc?: string;
+  imageSrcA?: string;
+  imageSrcB?: string;
+  coaUrl: string;
+  action: "cart" | "soon";
+  flavors?: string[];
+};
+
 export const products: Product[] = [
   {
     id: "mystic-gummies-5ct",
@@ -70,3 +85,31 @@ export const products: Product[] = [
     ],
   },
 ];
+
+export const allBrands = [
+  { type: "text", label: "Mystic Labs", category: "kratom" },
+
+  {
+    type: "image",
+    label: "7STAX",
+    category: "kratom",
+    imageSrc: "/images/7-stax-logo.png",
+    maskLowerText: true,
+    caption: "nano-mitragynine line",
+  },
+
+  { type: "text", label: "HALF BAK'D", category: "cannabis" },
+  { type: "text", label: "Green Roads", category: "cannabis" },
+  { type: "text", label: "Cannabis Life", category: "cannabis" },
+  { type: "text", label: "Curated THCa Flower & Extract", category: "cannabis" },
+] as const;
+
+export const aboutBrandTiles = allBrands;
+
+export const kratomBrandTiles = allBrands.filter(
+  (brand) => brand.category === "kratom"
+);
+
+export const cannabisBrandTiles = allBrands.filter(
+  (brand) => brand.category === "cannabis"
+);
