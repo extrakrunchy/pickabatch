@@ -240,15 +240,21 @@ button { cursor: pointer; }
 .hero-smoke-plume {
   position: absolute;
   border-radius: 999px;
-  filter: blur(90px);
+  filter: blur(110px);
   background: radial-gradient(
     circle,
-    rgba(255,255,255,0.16) 0%,
-    rgba(255,255,255,0.08) 30%,
-    rgba(255,255,255,0.04) 55%,
-    transparent 80%
+    rgba(255,255,255,0.18) 0%,
+    rgba(180, 255, 200, 0.08) 25%,
+    rgba(255,255,255,0.06) 50%,
+    rgba(120, 200, 140, 0.05) 65%,
+    transparent 85%
   );
-  animation: smokeMove 30s ease-in-out infinite alternate;
+  mix-blend-mode: screen;
+  opacity: 0.75;
+}
+
+.hero-smoke-layer {
+  backdrop-filter: blur(2px);
 }
 
 .hero-smoke-plume-a {
