@@ -1,18 +1,3 @@
-export type Product = {
-  id: string;
-  name: string;
-  details: string;
-  note: string;
-  price: string;
-  imageMode: "single" | "dual";
-  imageSrc?: string;
-  imageSrcA?: string;
-  imageSrcB?: string;
-  coaUrl: string;
-  action: "cart" | "soon";
-  flavors?: string[];
-};
-
 export const products: Product[] = [
   {
     id: "mystic-gummies-5ct",
@@ -64,32 +49,24 @@ export const products: Product[] = [
     action: "soon",
     flavors: ["Berry Rush"],
   },
-];
-
-export const allBrands = [
-  { type: "text", label: "Mystic Labs", category: "kratom" },
-
   {
-    type: "image",
-    label: "7STAX",
-    category: "kratom",
-    imageSrc: "/images/7-stax-logo.png",
-    maskLowerText: true,
-    caption: "nano-mitragynine line",
+    id: "half-bakd-sumo-sourd-25ct",
+    name: "HALF BAK'D SUMO SOUR'D — 25 Count",
+    details: "25 count pack • 420mg total",
+    note: "Sour gummy line with 7 flavor options.",
+    price: "$34.99",
+    imageMode: "single",
+    imageSrc: "/images/half-bakd-sourd-box-25ct.png",
+    coaUrl: "https://half-bakd.com/pages/lab-tests?state=FL",
+    action: "cart",
+    flavors: [
+      "Big Apple",
+      "Bluematic Razz",
+      "Pucker Punch",
+      "Sour Batch",
+      "Sour Zkittles",
+      "Strawberry Straws",
+      "Wacky Watermelon",
+    ],
   },
-
-  { type: "text", label: "HALF BAK'D", category: "cannabis" },
-  { type: "text", label: "Green Roads", category: "cannabis" },
-  { type: "text", label: "Cannabis Life", category: "cannabis" },
-  { type: "text", label: "Curated THCa Flower & Extract", category: "cannabis" },
-] as const;
-
-export const aboutBrandTiles = allBrands;
-
-export const kratomBrandTiles = allBrands.filter(
-  (brand) => brand.category === "kratom"
-);
-
-export const cannabisBrandTiles = allBrands.filter(
-  (brand) => brand.category === "cannabis"
-);
+];
