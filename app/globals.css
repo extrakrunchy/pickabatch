@@ -154,7 +154,17 @@ button { cursor: pointer; }
 .btn {
   border: 1px solid rgba(255,255,255,0.16);
   background: rgba(255,255,255,0.1);
+  color: #d7d0ff;
+  font-weight: 800;
+  text-shadow:
+    0 0 6px rgba(215, 208, 255, 0.35),
+    0 0 14px rgba(215, 208, 255, 0.18);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.03) inset,
+    0 8px 22px rgba(0,0,0,0.22);
 }
+
+
 
 .btn-secondary {
   border: 1px solid rgba(255,255,255,0.1);
