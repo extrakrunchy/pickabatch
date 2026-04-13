@@ -66,7 +66,6 @@ export const products: Product[] = [
   },
 ];
 
-
 export const allBrands = [
   { type: "text", label: "Mystic Labs", category: "kratom" },
 
