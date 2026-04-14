@@ -10,6 +10,8 @@ export function HomeContent() {
   return (
     <SiteShell cartCount={cartCount}>
       <section className="hero hero-video container">
+        
+        {/* 🔥 SMOKE VIDEO */}
         <video
           className="hero-video-smoke"
           src="/videos/hero-smoke.mp4"
@@ -19,17 +21,18 @@ export function HomeContent() {
           playsInline
         />
 
-        <div className="hero-video-fade" aria-hidden="true" />
+        {/* LIGHT OVERLAY */}
+        <div className="hero-video-fade" />
 
         <div className="hero-content">
-          <div className="hero-links">
-            {/* put your hero links here if you want */}
-          </div>
-
-          <h1 className="hero-title">pick A batch</h1>
+          
+          <h1 className="hero-title">
+            pick A batch
+          </h1>
 
           <p className="lead hero-tagline">
-            Know your batch. <span className="smoke-accent">Choose better.</span>{" "}
+            Know your batch.{" "}
+            <span className="smoke-accent">Choose better.</span>{" "}
             <span className="smoke-accent">Feel better.</span>
           </p>
 
@@ -52,6 +55,7 @@ export function HomeContent() {
               About Pick A Batch
             </Link>
           </div>
+
         </div>
       </section>
     </SiteShell>
