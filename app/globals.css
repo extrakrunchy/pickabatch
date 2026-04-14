@@ -230,11 +230,7 @@ button { cursor: pointer; }
 }
 
 .hero-smoke-layer {
-  position: absolute;
-  inset: -10%;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.6;
+  display: none;
 }
 
 .hero-smoke-plume {
