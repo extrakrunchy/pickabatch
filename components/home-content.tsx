@@ -9,10 +9,7 @@ export function HomeContent() {
 
   return (
     <SiteShell cartCount={cartCount}>
-      <section
-        className="hero hero-video container"
-        style={{ position: "relative", overflow: "hidden" }}
-      >
+      <section className="hero hero-video container">
         <video
           className="hero-video-smoke"
           src="/videos/hero-smoke.mp4"
@@ -24,14 +21,17 @@ export function HomeContent() {
 
         <div className="hero-video-fade" aria-hidden="true" />
 
-        <div className="hero-links">
-          {/* put your hero links here */}
-        </div>
+        <div className="hero-content">
+          <div className="hero-links">
+            {/* put your hero links here if you want */}
+          </div>
 
-        <div style={{ position: "relative", zIndex: 2 }}>
-          <h1>pick A batch</h1>
+          <h1 className="hero-title">pick A batch</h1>
 
-          <p className="lead">Know your batch. Choose better. Feel better.</p>
+          <p className="lead hero-tagline">
+            Know your batch. <span className="smoke-accent">Choose better.</span>{" "}
+            <span className="smoke-accent">Feel better.</span>
+          </p>
 
           <p className="lead">
             A cleaner, smarter botanical storefront built around transparency,
