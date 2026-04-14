@@ -243,68 +243,69 @@ button { cursor: pointer; }
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
 }
 
+/* 🔥 FORCE VISIBLE SMOKE */
 .hero-video-smoke {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.95;
-  pointer-events: none;
+
+  opacity: 0.85;
+
   z-index: 0;
-  filter: contrast(1.35) brightness(1.05);
+  pointer-events: none;
+
+  filter:
+    contrast(1.35)
+    brightness(1.05);
+
   mix-blend-mode: normal;
 }
 
+/* DARKEN FOR READABILITY */
 .hero-video-fade {
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
+
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.55) 0%,
-    rgba(0,0,0,0.18) 35%,
-    rgba(0,0,0,0.08) 65%,
-    rgba(0,0,0,0.18) 100%
+    rgba(0,0,0,0.65) 0%,
+    rgba(0,0,0,0.25) 40%,
+    rgba(0,0,0,0.15) 70%,
+    rgba(0,0,0,0.35) 100%
   );
 }
 
+/* ===== TEXT ===== */
+
 .hero-title {
   position: relative;
-  z-index: 3;
+  z-index: 4;
   margin: 0;
   font-size: clamp(2.8rem, 7vw, 5.4rem);
   font-weight: 300;
   letter-spacing: 0.02em;
-  color: rgba(255,255,255,0.94);
+
+  color: rgba(255,255,255,0.96);
+
   text-shadow:
     0 0 8px rgba(255,255,255,0.08),
     0 0 24px rgba(255,255,255,0.06);
 }
 
-.hero-tagline {
-  position: relative;
-  z-index: 3;
-}
-
+/* 🔥 PURPLE REACTION */
 .smoke-accent {
   color: #d7d0ff;
+
   text-shadow:
     0 0 10px rgba(215, 208, 255, 0.35),
-    0 0 24px rgba(215, 208, 255, 0.22),
-    0 0 42px rgba(215, 208, 255, 0.12);
-}
-
-@keyframes smokeMove {
-  from {
-    transform: translateY(0px) scale(1);
-  }
-  to {
-    transform: translateY(-30px) scale(1.08);
-  }
+    0 0 26px rgba(215, 208, 255, 0.25),
+    0 0 48px rgba(215, 208, 255, 0.15);
 }
