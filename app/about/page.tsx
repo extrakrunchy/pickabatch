@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function AboutPage() {
   return (
     <div className="page-shell about-page-shell">
@@ -12,6 +14,22 @@ export default function AboutPage() {
           preload="auto"
         />
       </div>
+
+      <header className="header">
+        <div className="container header-inner">
+          <Link href="/" className="logo">
+            PICK A BATCH
+          </Link>
+
+          <nav className="nav">
+            <Link href="/products">PRODUCTS</Link>
+            <Link href="/about">ABOUT</Link>
+            <Link href="/cart" className="cart-chip">
+              CART (0)
+            </Link>
+          </nav>
+        </div>
+      </header>
 
       <main className="container page-content about-page">
         <section className="about-hero">
