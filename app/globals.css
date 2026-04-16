@@ -331,13 +331,21 @@ button {
 }
 
 .page-video-bg__video {
-  width: 130%;
-  height: 130%;
+  width: 120%;
+  height: 120%;
   object-fit: cover;
-  opacity: 0.12;
-  filter: grayscale(100%) blur(14px) brightness(0.38) contrast(1.05);
-  transform: scale(1.2) translateY(4%);
+
+  opacity: 0.22;
+
+  filter:
+    grayscale(100%)
+    blur(6px)
+    brightness(0.5)
+    contrast(1.1);
+
+  transform: scale(1.1);
   transform-origin: center;
+
   pointer-events: none;
   z-index: 0;
 }
