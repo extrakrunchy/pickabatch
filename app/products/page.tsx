@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 
 export default function ProductsPage() {
@@ -32,7 +30,6 @@ export default function ProductsPage() {
         </section>
 
         <section className="grid product-grid">
-          {/* PRODUCT CARD 1 */}
           <div className="card">
             <div className="image-frame">
               <img src="/products/mystic-5ct.png" alt="Mystic Labs 5ct" />
@@ -46,7 +43,6 @@ export default function ProductsPage() {
             </div>
           </div>
 
-          {/* PRODUCT CARD 2 */}
           <div className="card">
             <div className="image-frame">
               <img src="/products/mystic-30ct.png" alt="Mystic Labs 30ct" />
