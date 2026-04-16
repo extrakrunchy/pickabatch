@@ -6,7 +6,7 @@ export default function AboutPage() {
       <div className="page-video-bg">
         <video
           className="page-video-bg__video"
-          src="/hero-smoke.mp4"
+          src="/about-smoke.mp4"
           autoPlay
           muted
           loop
