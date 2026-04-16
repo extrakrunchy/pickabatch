@@ -240,6 +240,18 @@ button {
   background: var(--panel);
   border-radius: 28px;
   padding: 18px;
+
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(255,255,255,0.2);
+
+  box-shadow:
+    0 0 20px rgba(255,255,255,0.06),
+    0 12px 28px rgba(0,0,0,0.35);
 }
 
 .image-frame {
