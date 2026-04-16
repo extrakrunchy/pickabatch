@@ -14,7 +14,7 @@ export function HomeContent() {
         {/* 🔥 SMOKE VIDEO */}
         <video
           className="hero-video-smoke"
-          src="/video/hero-smoke.mp4"
+          src="/hero-smoke.mp4"
           autoPlay
           muted
           loop
