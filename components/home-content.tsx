@@ -19,6 +19,7 @@ export function HomeContent() {
           muted
           loop
           playsInline
+          controls
         />
 
         {/* LIGHT OVERLAY */}
