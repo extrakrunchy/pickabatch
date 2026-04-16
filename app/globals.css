@@ -475,3 +475,11 @@ button { cursor: pointer; }
   line-height: 1.8;
   margin-bottom: 18px;
 }
+
+.hero-video-smoke::-webkit-media-controls {
+  display: none !important;
+}
+
+.hero-video-smoke::-webkit-media-controls-enclosure {
+  display: none !important;
+}
