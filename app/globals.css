@@ -74,6 +74,15 @@ button {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.header {
+  transition: all 0.3s ease;
+}
+
+.header:hover {
+  background: rgba(3,3,3,0.85);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
 .header-inner {
   display: flex;
   align-items: center;
