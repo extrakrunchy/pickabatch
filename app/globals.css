@@ -188,14 +188,16 @@ button {
 }
 
 .btn:hover {
-  border-color: rgba(215, 208, 255, 0.38);
-  background: rgba(255, 255, 255, 0.14);
-  box-shadow:
-    0 0 10px rgba(215, 208, 255, 0.16),
-    0 0 24px rgba(215, 208, 255, 0.1),
-    0 8px 22px rgba(0, 0, 0, 0.24);
-}
+  transform: translateY(-2px) scale(1.02);
 
+  border-color: rgba(215, 208, 255, 0.38);
+  background: rgba(255,255,255,0.14);
+
+  box-shadow:
+    0 0 12px rgba(215, 208, 255, 0.18),
+    0 0 28px rgba(215, 208, 255, 0.12),
+    0 10px 28px rgba(0,0,0,0.28);
+}
 .btn-secondary {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: transparent;
