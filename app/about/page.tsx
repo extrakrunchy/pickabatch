@@ -1,6 +1,6 @@
 export default function AboutPage() {
   return (
-    <>
+    <div className="page-shell about-page-shell">
       <div className="page-video-bg">
         <video
           className="page-video-bg__video"
@@ -13,7 +13,7 @@ export default function AboutPage() {
         />
       </div>
 
-      <main className="page-content about-page">
+      <main className="container page-content about-page">
         <section className="about-hero">
           <div className="about-inner">
             <p className="about-eyebrow">ABOUT PICK A BATCH</p>
@@ -46,6 +46,6 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
-    </>
+    </div>
   );
 }
