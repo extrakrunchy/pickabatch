@@ -19,9 +19,9 @@ export function HomeContent() {
           muted
           loop
           playsInline
-          controls
+          preload="auto"
         />
-
+        
         {/* LIGHT OVERLAY */}
         <div className="hero-video-fade" />
 
