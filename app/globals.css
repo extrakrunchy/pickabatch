@@ -72,6 +72,7 @@ button {
   backdrop-filter: blur(14px);
   background: rgba(3, 3, 3, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
 }
 
 .header {
@@ -389,6 +390,8 @@ button {
 }
 
 .page-content {
+  position: relative;
+  z-index: 2;
   animation: pageFade 0.6s ease;
 }
 
@@ -421,8 +424,8 @@ button {
   width: 100%;
   padding: 40px 28px;
   border-radius: 24px;
-  background: rgba(0, 0, 0, 0.42);
-  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow:
     0 0 30px rgba(0, 0, 0, 0.35),
