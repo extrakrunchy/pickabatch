@@ -32,7 +32,7 @@ export default function ProductsPage() {
         <section className="grid product-grid">
           <div className="card">
             <div className="image-frame">
-              <img src="/products/mystic-5ct.png" alt="Mystic Labs 5ct" />
+              <img src="/mystic-30ct.png" alt="Mystic Labs 30ct" />
             </div>
 
             <h3>Mystic Labs Gummies (5ct)</h3>
