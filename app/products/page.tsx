@@ -30,9 +30,11 @@ export default function ProductsPage() {
         </section>
 
         <section className="grid product-grid">
+          
+          {/* PRODUCT CARD 1 — 5CT */}
           <div className="card">
             <div className="image-frame">
-              <img src="/mystic-30ct.png" alt="Mystic Labs 30ct" />
+              <img src="/mystic-5ct.png" alt="Mystic Labs 5ct" />
             </div>
 
             <h3>Mystic Labs Gummies (5ct)</h3>
@@ -43,9 +45,10 @@ export default function ProductsPage() {
             </div>
           </div>
 
+          {/* PRODUCT CARD 2 — 30CT */}
           <div className="card">
             <div className="image-frame">
-              <img src="/products/mystic-30ct.png" alt="Mystic Labs 30ct" />
+              <img src="/mystic-30ct.png" alt="Mystic Labs 30ct" />
             </div>
 
             <h3>Mystic Labs Gummies (30ct)</h3>
@@ -55,6 +58,7 @@ export default function ProductsPage() {
               <button className="btn">VIEW PRODUCT</button>
             </div>
           </div>
+
         </section>
       </main>
     </div>
