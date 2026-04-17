@@ -19,46 +19,57 @@ export default function ProductsPage() {
 
       <main className="container page-content">
         <section className="products-hero">
-          <h1 className="hero-title">
-            curated <span className="smoke-accent">products</span>
-          </h1>
+          <p className="section-kicker">CURATED SELECTION</p>
+          <h1 className="hero-title">Products worth your attention.</h1>
 
           <p className="lead">
-            A focused selection of products worth your attention — based on
-            quality, consistency, and real demand.
+            A focused collection built around quality, consistency, and real
+            demand — not clutter, guesswork, or filler.
           </p>
         </section>
 
         <section className="grid product-grid">
-          
-          {/* PRODUCT CARD 1 — 5CT */}
           <div className="card">
             <div className="image-frame">
-              <img src="/mystic-5ct.png" alt="Mystic Labs 5ct" />
+              <img src="/mystic-5ct.png" alt="Mystic Labs Gummies 5 Count" />
             </div>
 
-            <h3>Mystic Labs Gummies (5ct)</h3>
-            <p>150mg total extract · Made in USA</p>
+            <div className="card-copy">
+              <p className="eyebrow">MYSTIC LABS</p>
+              <h3>Mystic Labs Gummies — 5 Count</h3>
+              <p className="product-desc">
+                150mg total extract · 30mg per gummy
+              </p>
+              <p className="product-meta">
+                Made in USA · Third-party tested · Shipping only
+              </p>
+            </div>
 
             <div className="card-actions">
               <button className="btn">VIEW PRODUCT</button>
             </div>
           </div>
 
-          {/* PRODUCT CARD 2 — 30CT */}
           <div className="card">
             <div className="image-frame">
-              <img src="/mystic-30ct.png" alt="Mystic Labs 30ct" />
+              <img src="/mystic-30ct.png" alt="Mystic Labs Gummies 30 Count" />
             </div>
 
-            <h3>Mystic Labs Gummies (30ct)</h3>
-            <p>900mg total extract · Lab tested</p>
+            <div className="card-copy">
+              <p className="eyebrow">MYSTIC LABS</p>
+              <h3>Mystic Labs Gummies — 30 Count</h3>
+              <p className="product-desc">
+                900mg total extract · 30mg per gummy
+              </p>
+              <p className="product-meta">
+                Lab tested · Made in USA · Shipping only
+              </p>
+            </div>
 
             <div className="card-actions">
               <button className="btn">VIEW PRODUCT</button>
             </div>
           </div>
-
         </section>
       </main>
     </div>
