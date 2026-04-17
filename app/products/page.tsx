@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function ProductsPage() {
   return (
-    <div className="page-shell noir-products">
+    <div className="page-shell">
       <header className="header">
         <div className="container header-inner">
           <Link href="/" className="logo">
@@ -18,26 +18,28 @@ export default function ProductsPage() {
       </header>
 
       <main className="container page-content">
-        <section className="products-hero dramatic">
-          <p className="section-kicker">CURATED / TESTED / SELECTIVE</p>
+        <section className="products-hero">
+          <p className="section-kicker">CURATED SELECTION</p>
           <h1 className="hero-title">
             curated <span className="smoke-accent">products</span>
           </h1>
 
           <p className="lead">
-            Not an endless shelf. Not random inventory. Just products worth a
-            closer look — chosen for quality, consistency, and actual demand.
+            A focused selection built around quality, consistency, and real
+            demand — with a cleaner approach to products that deserve real
+            attention.
           </p>
         </section>
 
         <section className="grid product-grid">
-          <div className="card dark-card">
-            <div className="image-frame dark-frame">
+          {/* PRODUCT CARD 1 — 5CT */}
+          <div className="card premium-card">
+            <div className="image-frame">
               <img src="/mystic-5ct.png" alt="Mystic Labs Gummies 5 Count" />
             </div>
 
             <div className="card-copy">
-              <p className="eyebrow">MYSTIC LABS / KRATOM</p>
+              <p className="eyebrow">MYSTIC LABS</p>
               <h3>Mystic Labs Gummies — 5 Count</h3>
               <p className="product-desc">
                 150mg total extract · 30mg per gummy
@@ -48,17 +50,18 @@ export default function ProductsPage() {
             </div>
 
             <div className="card-actions">
-              <button className="btn btn-ghost">VIEW PRODUCT</button>
+              <button className="btn">VIEW PRODUCT</button>
             </div>
           </div>
 
-          <div className="card dark-card">
-            <div className="image-frame dark-frame">
+          {/* PRODUCT CARD 2 — 30CT */}
+          <div className="card premium-card">
+            <div className="image-frame">
               <img src="/mystic-30ct.png" alt="Mystic Labs Gummies 30 Count" />
             </div>
 
             <div className="card-copy">
-              <p className="eyebrow">MYSTIC LABS / KRATOM</p>
+              <p className="eyebrow">MYSTIC LABS</p>
               <h3>Mystic Labs Gummies — 30 Count</h3>
               <p className="product-desc">
                 900mg total extract · 30mg per gummy
@@ -69,7 +72,7 @@ export default function ProductsPage() {
             </div>
 
             <div className="card-actions">
-              <button className="btn btn-ghost">VIEW PRODUCT</button>
+              <button className="btn">VIEW PRODUCT</button>
             </div>
           </div>
         </section>
