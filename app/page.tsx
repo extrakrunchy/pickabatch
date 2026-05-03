@@ -1,10 +1,8 @@
-import Link from "next/link";
-
 export default function HomePage() {
   return (
     <div className="page-shell">
 
-      {/* 💨 HERO (REAL HOMEPAGE FEEL) */}
+      {/* 💨 HERO */}
       <section className="hero-video">
 
         <video
@@ -28,18 +26,16 @@ export default function HomePage() {
             Know Your Batch. Choose Better. Feel Better.
           </p>
 
-          {/* 👇 FAKE BUTTONS (visual only) */}
-          <div style={{ marginTop: "28px", display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
+          <div className="hero-actions">
             <button className="btn-disabled">VIEW PRODUCTS</button>
-            <button className="btn-disabled">LEARN MORE</button>
+            <button className="enter-button">ENTER SITE</button>
           </div>
         </div>
       </section>
 
-      {/* ⚠️ FULL PAGE LOCK OVERLAY */}
+      {/* ⚠️ LOCK OVERLAY */}
       <div className="maintenance-x-overlay">
 
-        {/* ⚠️ Animated Tape */}
         <div className="tape tape-one">
           UNDER MAINTENANCE — BIG THINGS ON THE WAY
         </div>
@@ -48,21 +44,19 @@ export default function HomePage() {
           UNDER MAINTENANCE — BIG THINGS ON THE WAY
         </div>
 
-        {/* 🧠 CENTER PANEL */}
         <div className="maintenance-notice">
 
           <h2>Private Access Only — Relaunch In Progress</h2>
 
           <p>
             Pick A Batch is currently being refined with tighter product curation,
-            improved batch transparency, and a more focused platform.
+            improved batch transparency, and a more focused experience.
           </p>
 
           <p className="small-text">
-            For access, product questions, or early updates:
+            For access or updates:
           </p>
 
-          {/* ✉️ EMAIL LINKS */}
           <div className="maintenance-emails">
             <a href="mailto:pickabatch@gmail.com">
               pickabatch@gmail.com
