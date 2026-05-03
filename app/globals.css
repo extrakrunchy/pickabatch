@@ -1,15 +1,11 @@
 :root {
   --bg: #030303;
-  --text: rgba(255, 255, 255, 0.92);
-  --muted: rgba(255, 255, 255, 0.64);
+  --text: rgba(255,255,255,0.92);
+  --muted: rgba(255,255,255,0.64);
 }
 
 * {
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
@@ -20,27 +16,16 @@ body {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
 }
 
 .page-shell {
   min-height: 100vh;
-  position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(circle at center, rgba(255,255,255,0.05), rgba(0,0,0,0.95)),
-    #030303;
 }
 
-.container {
-  width: min(1180px, calc(100% - 32px));
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
-}
-
-/* ===== HERO (SMOKE BACKGROUND) ===== */
+/* ===== HERO ===== */
 
 .hero-video {
   position: relative;
@@ -49,7 +34,6 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
-  isolation: isolate;
 }
 
 .hero-video-smoke {
@@ -59,21 +43,18 @@ a {
   height: 100%;
   object-fit: cover;
 
-  /* 🔥 blurred cinematic effect */
-  filter: blur(3px) brightness(0.65) contrast(1.1);
+  filter: blur(3px) brightness(0.65);
   transform: scale(1.05);
 
-  opacity: 0.9;
   z-index: 0;
-  pointer-events: none;
 }
 
 .hero-video-fade {
   position: absolute;
   inset: 0;
-  z-index: 1;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.6);
   backdrop-filter: blur(6px);
+  z-index: 1;
 }
 
 .hero-content {
@@ -82,26 +63,69 @@ a {
 }
 
 .hero-title {
-  margin: 0;
   font-size: clamp(2.5rem, 7vw, 5rem);
   font-weight: 300;
-  letter-spacing: 0.05em;
 }
 
 .smoke-accent {
   color: #d7d0ff;
-  text-shadow:
-    0 0 10px rgba(215,208,255,0.35),
-    0 0 30px rgba(215,208,255,0.25);
+  text-shadow: 0 0 20px rgba(215,208,255,0.4);
 }
 
 .lead {
-  margin-top: 18px;
-  font-size: 1rem;
+  margin-top: 16px;
   color: var(--muted);
 }
 
-/* ===== ⚠️ MAINTENANCE OVERLAY ===== */
+/* ===== BUTTONS ===== */
+
+.hero-actions {
+  margin-top: 26px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn-disabled {
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+  color: #d7d0ff;
+  cursor: not-allowed;
+}
+
+/* 🔒 ENTER BUTTON */
+
+.enter-button {
+  padding: 12px 20px;
+  border-radius: 999px;
+
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+
+  color: #d7d0ff;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+
+  cursor: not-allowed;
+}
+
+/* SHAKE */
+
+.enter-button:hover {
+  animation: shake 0.35s ease;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+
+/* ===== MAINTENANCE OVERLAY ===== */
 
 .maintenance-x-overlay {
   position: fixed;
@@ -109,8 +133,6 @@ a {
   z-index: 9999;
   pointer-events: none;
 }
-
-/* ⚠️ Caution Tape */
 
 .tape {
   position: absolute;
@@ -129,14 +151,9 @@ a {
 
   color: white;
   font-weight: 900;
-  font-size: clamp(1rem, 2.5vw, 2rem);
-  letter-spacing: 0.12em;
   text-align: center;
 
-  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
-  box-shadow: 0 0 35px rgba(0,0,0,0.65);
-
-  animation: tapeFloat 6s ease-in-out infinite;
+  animation: tapeFloat 6s infinite ease-in-out;
 }
 
 .tape-one {
@@ -145,24 +162,18 @@ a {
 
 .tape-two {
   transform: translate(-50%, -50%) rotate(-35deg);
-  animation: tapeFloatReverse 6s ease-in-out infinite;
+  animation: tapeFloatReverse 6s infinite ease-in-out;
 }
 
-/* 🎞 Animation */
-
 @keyframes tapeFloat {
-  0% { transform: translate(-50%, -50%) rotate(35deg); }
-  50% { transform: translate(-50%, -52%) rotate(36.5deg); }
-  100% { transform: translate(-50%, -50%) rotate(35deg); }
+  50% { transform: translate(-50%, -52%) rotate(36deg); }
 }
 
 @keyframes tapeFloatReverse {
-  0% { transform: translate(-50%, -50%) rotate(-35deg); }
-  50% { transform: translate(-50%, -48%) rotate(-36.5deg); }
-  100% { transform: translate(-50%, -50%) rotate(-35deg); }
+  50% { transform: translate(-50%, -48%) rotate(-36deg); }
 }
 
-/* ===== 🧠 NOTICE CARD ===== */
+/* NOTICE */
 
 .maintenance-notice {
   pointer-events: auto;
@@ -172,79 +183,41 @@ a {
   bottom: 8%;
   transform: translateX(-50%);
 
-  width: min(90vw, 620px);
-  padding: 26px;
+  width: min(90vw, 600px);
+  padding: 24px;
 
-  border-radius: 24px;
-  background: rgba(0,0,0,0.78);
-  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 20px;
+  background: rgba(0,0,0,0.8);
+  border: 1px solid rgba(255,255,255,0.2);
 
-  backdrop-filter: blur(14px);
   text-align: center;
-
-  box-shadow:
-    0 0 45px rgba(0,0,0,0.55),
-    inset 0 0 1px rgba(255,255,255,0.08);
 }
 
 .maintenance-notice h2 {
   margin-bottom: 10px;
-  font-size: clamp(1.4rem, 4vw, 2rem);
 }
 
 .maintenance-notice p {
-  color: rgba(255,255,255,0.78);
-  line-height: 1.6;
+  color: rgba(255,255,255,0.75);
 }
 
 .small-text {
-  margin-top: 16px;
-  font-size: 0.95rem;
+  margin-top: 14px;
 }
 
-/* ===== ✉️ EMAIL BUTTONS ===== */
+/* EMAIL */
 
 .maintenance-emails {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
   margin-top: 18px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .maintenance-emails a {
-  color: white;
-  font-weight: 800;
-  padding: 12px 16px;
+  padding: 10px 16px;
   border-radius: 999px;
-
   background: linear-gradient(135deg, #7c3cff, #b26cff);
-
-  box-shadow: 0 0 18px rgba(150, 90, 255, 0.4);
-
-  animation: glowPulse 3.5s ease-in-out infinite;
-}
-
-/* ✨ Glow animation */
-
-@keyframes glowPulse {
-  0% {
-    box-shadow: 0 0 12px rgba(150,90,255,0.35);
-  }
-  50% {
-    box-shadow:
-      0 0 25px rgba(150,90,255,0.65),
-      0 0 50px rgba(150,90,255,0.25);
-  }
-  100% {
-    box-shadow: 0 0 12px rgba(150,90,255,0.35);
-  }
-}
-
-/* ===== MOBILE ===== */
-
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: clamp(2rem, 9vw, 3rem);
-  }
+  font-weight: 800;
 }
