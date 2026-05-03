@@ -159,8 +159,8 @@ a {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 140vw;
-  padding: 18px 0;
+  width: 160vw; /* 🔥 wider coverage */
+  padding: 22px 0; /* 🔥 thicker tape */
 
   background: repeating-linear-gradient(
     45deg,
@@ -172,8 +172,23 @@ a {
 
   color: white;
   font-weight: 900;
+
+  font-size: clamp(1.2rem, 2.8vw, 2.4rem); /* 🔥 BIGGER TEXT */
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
   text-align: center;
+
+  text-shadow:
+    0 2px 4px rgba(0,0,0,0.85),
+    0 0 10px rgba(0,0,0,0.6);
+
+  box-shadow:
+    0 0 35px rgba(0,0,0,0.75),
+    inset 0 0 2px rgba(255,255,255,0.2);
 }
+
+/* positioning + animation stays */
 
 .tape-one {
   transform: translate(-50%, -50%) rotate(35deg);
@@ -183,14 +198,6 @@ a {
 .tape-two {
   transform: translate(-50%, -50%) rotate(-35deg);
   animation: tapeFloatReverse 6s infinite ease-in-out;
-}
-
-@keyframes tapeFloat {
-  50% { transform: translate(-50%, -52%) rotate(36deg); }
-}
-
-@keyframes tapeFloatReverse {
-  50% { transform: translate(-50%, -48%) rotate(-36deg); }
 }
 
 /* ===== NOTICE ===== */
