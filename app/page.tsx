@@ -2,49 +2,67 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main className="maintenance-page">
+    <div className="page-shell">
 
-      {/* 💨 Smoke Background */}
-      <video
-        className="bg-video"
-        autoPlay
-        muted
-        loop
-        playsInline
-      >
-        <source src="/hero-smoke.mp4" type="video/mp4" />
-      </video>
+      {/* 💨 HERO (REAL HOMEPAGE FEEL) */}
+      <section className="hero-video">
 
-      {/* 🌑 Dark Overlay */}
-      <div className="overlay" />
+        <video
+          className="hero-video-smoke"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/hero-smoke.mp4" type="video/mp4" />
+        </video>
 
-      {/* ⚠️ Caution Tape X */}
+        <div className="hero-video-fade" />
+
+        <div className="hero-content container">
+          <h1 className="hero-title">
+            PICK <span className="smoke-accent">A BATCH</span>
+          </h1>
+
+          <p className="lead">
+            Know Your Batch. Choose Better. Feel Better.
+          </p>
+
+          {/* 👇 FAKE BUTTONS (visual only) */}
+          <div style={{ marginTop: "28px", display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
+            <button className="btn-disabled">VIEW PRODUCTS</button>
+            <button className="btn-disabled">LEARN MORE</button>
+          </div>
+        </div>
+      </section>
+
+      {/* ⚠️ FULL PAGE LOCK OVERLAY */}
       <div className="maintenance-x-overlay">
+
+        {/* ⚠️ Animated Tape */}
         <div className="tape tape-one">
-          UNDER MAINTENANCE • BIG THINGS ON THE WAY
+          UNDER MAINTENANCE — BIG THINGS ON THE WAY
         </div>
 
         <div className="tape tape-two">
-          UNDER MAINTENANCE • BIG THINGS ON THE WAY
+          UNDER MAINTENANCE — BIG THINGS ON THE WAY
         </div>
 
-        {/* 🧠 Center Message */}
+        {/* 🧠 CENTER PANEL */}
         <div className="maintenance-notice">
-          <h1>PICK A BATCH</h1>
 
-          <p className="status-pill">SITE IS BEING UPDATED</p>
-
-          <h2>We’re tightening things up.</h2>
+          <h2>Private Access Only — Relaunch In Progress</h2>
 
           <p>
-            Pick A Batch is currently being refined with cleaner product pages,
-            improved batch transparency, and a more focused experience.
+            Pick A Batch is currently being refined with tighter product curation,
+            improved batch transparency, and a more focused platform.
           </p>
 
           <p className="small-text">
             For access, product questions, or early updates:
           </p>
 
+          {/* ✉️ EMAIL LINKS */}
           <div className="maintenance-emails">
             <a href="mailto:pickabatch@gmail.com">
               pickabatch@gmail.com
@@ -54,9 +72,10 @@ export default function HomePage() {
               info@pickabatch.co.site
             </a>
           </div>
+
         </div>
       </div>
 
-    </main>
+    </div>
   );
 }
