@@ -245,21 +245,13 @@ button {
 .maintenance-notice h2 {
   margin: 0 0 10px;
   font-size: clamp(1.4rem, 3vw, 2rem);
-  line-height: 1.15;
 }
 
 .maintenance-notice p {
   color: rgba(255,255,255,0.75);
-  line-height: 1.55;
-  margin: 0 auto;
-  max-width: 540px;
 }
 
-.small-text {
-  margin-top: 14px !important;
-}
-
-/* ===== EMAIL BUTTONS ===== */
+/* ===== EMAIL + CATALOG BUTTON ===== */
 
 .maintenance-emails {
   margin-top: 18px;
@@ -269,7 +261,8 @@ button {
   flex-wrap: wrap;
 }
 
-.maintenance-emails a {
+.maintenance-emails a,
+.catalog-button {
   padding: 10px 16px;
   border-radius: 999px;
   background: linear-gradient(135deg, #7c3cff, #b26cff);
@@ -279,7 +272,14 @@ button {
   transition: transform 0.2s ease;
 }
 
-.maintenance-emails a:hover {
+.catalog-button {
+  display: inline-block;
+  margin-top: 14px;
+  background: linear-gradient(135deg, #5a2cff, #9d5cff);
+}
+
+.maintenance-emails a:hover,
+.catalog-button:hover {
   transform: translateY(-2px);
 }
 
@@ -313,7 +313,8 @@ button {
     padding: 22px 18px;
   }
 
-  .maintenance-emails a {
+  .maintenance-emails a,
+  .catalog-button {
     width: 100%;
     text-align: center;
   }
