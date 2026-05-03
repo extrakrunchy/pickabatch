@@ -41,7 +41,7 @@ export default function HomePage() {
             improved batch transparency, and a more focused experience.
           </p>
 
-          <p className="small-text">For access, updates and even special requests please use either emaail below:</p>
+          <p className="small-text">For access/updates and even special requests please contact us using either email below:</p>
 
           <div className="maintenance-emails">
             <a href="mailto:pickabatch@gmail.com">pickabatch@gmail.com</a>
