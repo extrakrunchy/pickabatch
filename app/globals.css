@@ -58,7 +58,7 @@ a {
   z-index: 1;
 }
 
-/* ===== 🔥 SMOKE-REACTIVE TEXT ===== */
+/* ===== 🔥 IMPROVED BACKGROUND TEXT ===== */
 
 .hero-content {
   position: relative;
@@ -68,30 +68,33 @@ a {
 .hero-title {
   margin: 0;
 
-  font-size: clamp(2.6rem, 8vw, 6rem);
+  font-size: clamp(3.5rem, 10vw, 9rem); /* BIGGER */
+
   font-weight: 300;
-  letter-spacing: 0.06em;
 
-  color: rgba(255,255,255,0.1);
+  letter-spacing: 0.18em; /* MORE SPACING */
 
-  filter: blur(2px);
-  transform: scale(1.05);
+  color: rgba(255,255,255,0.12);
+
+  filter: blur(1.5px); /* LESS BLUR */
+
+  transform: scale(1.08);
 
   mix-blend-mode: screen;
 
   text-shadow:
-    0 0 10px rgba(255,255,255,0.05),
-    0 0 25px rgba(255,255,255,0.05);
+    0 0 10px rgba(255,255,255,0.06),
+    0 0 30px rgba(255,255,255,0.08);
 }
 
 .smoke-accent {
-  color: rgba(215,208,255,0.18);
+  color: rgba(215,208,255,0.22);
 
   mix-blend-mode: screen;
 
   text-shadow:
-    0 0 14px rgba(215,208,255,0.25),
-    0 0 35px rgba(215,208,255,0.18);
+    0 0 18px rgba(215,208,255,0.35),
+    0 0 40px rgba(215,208,255,0.2);
 }
 
 .lead {
@@ -170,8 +173,6 @@ a {
   color: white;
   font-weight: 900;
   text-align: center;
-
-  mix-blend-mode: normal;
 }
 
 .tape-one {
@@ -265,6 +266,6 @@ a {
 
 @media (max-width: 768px) {
   .hero-title {
-    font-size: clamp(2rem, 9vw, 3rem);
+    font-size: clamp(2.2rem, 10vw, 4rem);
   }
 }
