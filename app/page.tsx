@@ -37,11 +37,19 @@ export default function HomePage() {
           <h2>Private Access Only — Relaunch In Progress</h2>
 
           <p>
-            Pick A Batch is currently being refined with tighter product curation,
-            improved batch transparency, and a more focused experience.
+            Pick A Batch is currently being refined with tighter product
+            curation, improved batch transparency, and a more focused
+            experience.
           </p>
 
-          <p className="small-text">For access/updates and even special requests please contact us using either email below:</p>
+          <p className="small-text">
+            Limited product access is currently available by direct request.
+          </p>
+
+          <p className="small-text">
+            For access, product questions, catalog requests, or special orders,
+            contact us below.
+          </p>
 
           <div className="maintenance-emails">
             <a href="mailto:pickabatch@gmail.com">pickabatch@gmail.com</a>
@@ -49,6 +57,13 @@ export default function HomePage() {
               info@pickabatch.co.site
             </a>
           </div>
+
+          <a
+            href="mailto:pickabatch@gmail.com?subject=Product%20Catalog%20Request"
+            className="catalog-button"
+          >
+            Request Product Catalog
+          </a>
         </div>
       </div>
     </div>
