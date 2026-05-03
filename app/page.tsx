@@ -1,53 +1,28 @@
+import Link from "next/link";
+
 export default function HomePage() {
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        background: "#000000",
-        color: "#ffffff",
-        textAlign: "center",
-        padding: "24px",
-        fontFamily: "Arial, Helvetica, sans-serif",
-      }}
-    >
-      <div style={{ maxWidth: "720px", width: "100%" }}>
-        <div
-          style={{
-            width: "260px",
-            height: "1px",
-            background: "rgba(255,255,255,0.72)",
-            margin: "0 auto 30px",
-          }}
-        />
+    <main className="maintenance-page">
+      <section className="maintenance-card">
+        <h1>PICK A BATCH</h1>
 
-        <h1
-          style={{
-            margin: "0 0 18px",
-            fontSize: "clamp(2rem, 6vw, 3.2rem)",
-            fontWeight: 300,
-            letterSpacing: "0.28em",
-            textTransform: "uppercase",
-          }}
-        >
-          Pick A Batch
-        </h1>
+        <p className="status-pill">SITE IS BEING UPDATED</p>
 
-        <p
-          style={{
-            margin: "0 auto",
-            maxWidth: "620px",
-            fontSize: "1rem",
-            lineHeight: 1.8,
-            color: "rgba(255,255,255,0.72)",
-          }}
-        >
-          Our website is temporarily unavailable while we make updates behind
-          the scenes. Please check back soon.
+        <h2>We’re tightening things up.</h2>
+
+        <p>
+          Pick A Batch is currently being updated with cleaner product pages,
+          improved batch information, and a better overall experience.
         </p>
-      </div>
+
+        <p className="small-text">
+          For access, product questions, or updates:
+        </p>
+
+        <a href="mailto:info@pickabatch.co.site" className="email-button">
+          Email for Access
+        </a>
+      </section>
     </main>
   );
 }
